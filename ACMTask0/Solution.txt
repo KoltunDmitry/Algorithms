@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        StreamTokenizer st = new StreamTokenizer(new BufferedReader(new FileReader("input.txt")));
+        Set<Integer> set = new TreeSet<>();
+        while (st.nextToken() == StreamTokenizer.TT_NUMBER) {
+            set.add((int) st.nval);
+        }
+        Long sum = new Long(0);
+        Iterator<Integer> it = set.iterator();
+        while (it.hasNext()) {
+            sum += it.next().longValue();
+        }
+        PrintWriter pw = new PrintWriter("output.txt");
+        String sumString = sum.toString();
+        pw.write(sumString);
+        pw.close();
+    }
+}

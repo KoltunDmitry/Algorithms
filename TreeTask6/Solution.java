@@ -1,4 +1,4 @@
- import java.io.*;
+import java.io.*;
 import java.util.*;
 
 public class Solution implements Runnable {
@@ -118,7 +118,7 @@ class Tree {
         }
         return sb;
     }
-
+    
     public List<Integer> backwash(Node node, List<Integer>max) {
         if (node != null) {
             backwash(node.left, max);
