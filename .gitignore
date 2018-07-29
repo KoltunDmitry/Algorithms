@@ -2,3 +2,10 @@
 .DS_Store/
 .idea/
 out/
+Debug/
+*.sln
+*.txt
+*.in
+*.out
+*.vcxproj
+*.vcxproj.filters
